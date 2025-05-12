@@ -1,5 +1,7 @@
 # Drone Detection, Classification, and Mitigation Using Software-Defined Radios  
-![Cal Poly Logo](
+
+![Cal Poly Logo](CPP_Horizontal_2C_Green_RGB-700px.png)
+
 **California Polytechnic State University, Pomona**  
 **Senior Design Project 2024-2025**
 
@@ -9,7 +11,7 @@ This repository contains the full implementation of a drone detection, classific
 
 ---
 
-## 📡 Overview
+## Overview
 
 The proliferation of drones presents new security challenges. This project provides a proof-of-concept for:
 
@@ -19,7 +21,7 @@ The proliferation of drones presents new security challenges. This project provi
 
 ---
 
-## 🛠️ Features
+## Features
 
 - 📶 **Signal Acquisition**: Captured drone RF signals using SDRs (e.g., HackRF One).
 - 🎵 **Feature Extraction**: Used Mel Frequency Cepstral Coefficients (MFCC) to extract features from raw IQ samples.
@@ -28,45 +30,16 @@ The proliferation of drones presents new security challenges. This project provi
 
 ---
 
-## 🧪 Methodology
+## Methodology
 
 1. **Data Collection**  
-   Recorded IQ samples from drones performing various commands using SDR hardware.
+   Recorded RF signal samples from drones performing various commands using SDR hardware.
 
 2. **Preprocessing**  
-   Transformed IQ samples using MFCC for effective machine learning input.
+   Extracted MFCC features from sampled signals for machine learning classification.
 
 3. **Model Training**  
-   Used an SVM classifier to distinguish between drone states like idle, movement, and acceleration.
+   Used an SVM classifier to distinguish between drone models based on their MFCC features.
 
 4. **Replay Attack**  
-   Replayed captured RF signals using SDR to emulate drone control commands in real-time.
-
----
-
-## 📁 Project Structure
-
-<pre>
-drone-rf-detection/
-├── data/                 # Raw and processed IQ signal files
-├── models/               # Trained SVM models
-├── src/                  # All source code
-│   ├── preprocessing/    # MFCC and signal processing scripts
-│   ├── classification/   # SVM training and prediction
-│   └── replay/           # Replay attack implementation
-├── notebooks/            # Jupyter notebooks for experiments and analysis
-├── results/              # Visualizations and evaluation metrics
-├── images/               # Diagrams, demo photos, and plots
-├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation
-</pre>
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/drone-rf-detection.git
-cd drone-rf-detection
+   Replayes drone-landing RF signals from dataset to force classified drone to land.
