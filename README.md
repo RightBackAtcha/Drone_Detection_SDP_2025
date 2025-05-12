@@ -23,10 +23,10 @@ The proliferation of drones presents new security challenges. This project provi
 
 ## Features
 
-- 📶 **Signal Acquisition**: Captured drone RF signals using SDRs (e.g., HackRF One).
-- 🎵 **Feature Extraction**: Used Mel Frequency Cepstral Coefficients (MFCC) to extract features from raw IQ samples.
-- 🤖 **Machine Learning**: Trained Support Vector Machines (SVMs) for drone command classification.
-- 🔁 **Replay Attacks**: Implemented RF replay to disrupt or control drone behavior.
+- **Signal Acquisition**: Captured drone RF signals using SDRs (e.g., HackRF One).
+- **Feature Extraction**: Used Mel Frequency Cepstral Coefficients (MFCC) to extract features from raw IQ samples.
+- **Machine Learning**: Trained Support Vector Machines (SVMs) for drone command classification.
+- **Replay Attacks**: Implemented RF replay to disrupt or control drone behavior.
 
 ---
 
